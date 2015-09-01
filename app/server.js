@@ -5,6 +5,7 @@ import {createStore} from 'redux';
 import {Provider} from 'react-redux';
 import Router from 'react-router';
 import Location from 'react-router/lib/Location';
+
 import routes from './routes';
 import App from './views/App';
 import configureStore from './store/configureStore';
