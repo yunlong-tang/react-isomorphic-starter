@@ -1,8 +1,8 @@
 import React, {Component, PropTypes} from 'react';
-import * as ProductActions from '../actions/ProductAtions';
 import {connect} from 'react-redux';
+import DocumentMeta from 'react-document-meta';
+import * as ProductActions from '../actions/ProductAtions';
 
-@connect(state => ({product: state.product}))
 export default class Home extends Component {
 
   static needs = [
@@ -10,10 +10,20 @@ export default class Home extends Component {
   ]
 
   render() {
+    const meta = {
+      title: 'SNS Platform',
+      description: 'SNS Platform',
+      meta: {
+        name: {
+          keywords: 'SNS Platform'
+        }
+      }
+
+    }
     return (
       <div>
-        Home
-        {this.props.product}
+        <DocumentMeta {...meta}/>
+        <div>Home</div>
       </div>
     );
   }
